@@ -36,9 +36,11 @@ nav { position:sticky; top:0; z-index:100; background:#fff; box-shadow:0 2px 12p
 .split { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
 .poster-img-wrap { display:flex; justify-content:center; }
 .poster-img { max-width:100%; max-height:560px; border-radius:16px; box-shadow:0 12px 40px rgba(0,0,0,.12); }
-.poster-text h3 { font-size:28px; font-weight:800; margin-bottom:16px; }
-.poster-text p { font-size:16px; color:#6b5d4f; margin-bottom:20px; }
-.tags { display:flex; flex-wrap:wrap; gap:8px; }
+.poster-text h3 { font-size:28px; font-weight:800; margin-bottom:20px; letter-spacing:.5px; }
+.poster-text p { font-size:16px; color:#6b5d4f; line-height:1.85; margin-bottom:22px; }
+.poster-text .source-note { background:#FFF8F0; border-left:3px solid #ffc53d; border-radius:8px; padding:16px 20px; font-size:14.5px; line-height:1.8; color:#8a7a6a; }
+.poster-text .source-note strong { color:#4a3f35; }
+.tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:8px; }
 .tag { display:inline-block; background:#fff; border:2px solid #ffc53d; border-radius:20px; padding:5px 14px; font-size:13px; font-weight:700; color:#b8821d; }
 
 /* video */
@@ -46,9 +48,12 @@ nav { position:sticky; top:0; z-index:100; background:#fff; box-shadow:0 2px 12p
 .video-wrap video { width:100%; aspect-ratio:16/9; border-radius:16px; box-shadow:0 12px 40px rgba(0,0,0,.12); }
 
 /* about */
-.about-inner { max-width:700px; margin:0 auto; text-align:center; }
-.about-inner p { font-size:17px; color:#6b5d4f; margin-bottom:16px; }
-.about-stars { font-size:28px; letter-spacing:6px; margin:16px 0; }
+.about-inner { max-width:720px; margin:0 auto; text-align:center; }
+.about-inner > p { font-size:16.5px; color:#6b5d4f; line-height:1.85; margin-bottom:20px; text-align:left; }
+.about-inner .adult-note { background:#FFF3E6; border-left:4px solid #f06b37; border-radius:10px; padding:18px 22px; text-align:left; }
+.about-inner .adult-note strong { color:#b84920; }
+.about-inner .credits { font-size:13.5px; color:#a09080; line-height:1.75; margin-top:32px; padding-top:20px; border-top:1px solid #eadfce; text-align:left; }
+.about-stars { font-size:24px; letter-spacing:8px; margin:28px 0 4px; }
 
 /* footer */
 footer { background:#2a2350; color:rgba(255,255,255,.6); text-align:center; padding:32px 20px; font-size:13px; line-height:1.8; }
@@ -71,16 +76,16 @@ a { color:#744526; }
 a:focus-visible,button:focus-visible { outline:3px solid #2b72c4; outline-offset:4px; }
 .skip-link { position:fixed;left:12px;top:-80px;z-index:200;background:#fff;padding:10px 18px; }
 .skip-link:focus { top:10px; }
-.hero-entry { position:absolute;left:71.5%;top:65%;transform:translate(-50%,-50%);min-width:108px;min-height:36px;display:flex;align-items:center;justify-content:center;gap:12px;padding:9px 24px;border:2px solid #fff0cf;border-radius:30px;background:#b84920;color:#fff;font-weight:800;text-decoration:none;box-shadow:0 4px 12px #50352322; }
+.hero-entry { position:absolute; left:73.3%; top:63.5%; width:11.8%; height:8.8%; min-width:0; min-height:0; padding:0; border:0; border-radius:30px; background:transparent; box-shadow:none; text-decoration:none; cursor:pointer; }
+.hero-entry .hero-entry-label { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 .story-note { max-width:800px;margin:20px auto 0;text-align:center;font-size:15px;color:#685646; }
 .poster-text .source-note { font-size:15px;line-height:1.7; }
-.about-inner .credits { font-size:14px; }
 .section-sub { color:#746457; }
 .tag { color:#76511b; }
 footer { color:#e3dfed; }
 @media(max-width:600px) {
  .brand-name { font-size:15px; }.nav-inner { padding:10px 16px; }.nav-logo { width:32px;height:32px; }
- .hero-entry { position:static;transform:none;border-radius:0;box-shadow:none;min-height:44px; }
+ .hero-entry { top:63%; }
  .section { padding:36px 16px; }.section-sub { font-size:15px;margin-bottom:24px; }.section-title { font-size:26px; }
  .frame-wrap { border-radius:12px; }.story-note { font-size:13px; }.poster-text h3 { font-size:24px; }
  .poster-text p,.about-inner p { font-size:15px; }
